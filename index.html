@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gohigodukacredit Microfinance Limited | Chukua Bidhaa Sasa, Lipa Baadaye</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    .tab-active { border-bottom: 3px solid #047857; color: #047857; font-weight: 700; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+  <!-- BoT Mandatory Ownership & Support Disclosure Top Bar -->
+  <div class="bg-emerald-950 text-emerald-100 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-1">
+      <p id="bot-ownership-banner">
+        Jukwaa hili la Mikopo ya Kidijitali linamilikiwa na kuendeshwa na <strong>Gohigodukacredit Microfinance Limited</strong> (Gophigo Street, S.L.P 36282, Kigamboni, Dar es Salaam).
+      </p>
+      <div class="flex items-center gap-4 font-medium">
+        <span>📞 +255 700 000 000</span>
+        <span>✉️ support@gohigodukacredit.co.tz</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-emerald-700 text-white flex items-center justify-center font-extrabold text-lg">
+          GD
+        </div>
+        <div>
+          <h1 class="text-lg font-extrabold text-slate-900 leading-tight">Gohigodukacredit</h1>
+          <p class="text-xs text-slate-500">Microfinance Limited • B2B Stock-Now, Pay-Later</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span id="api-status-badge" class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-medium">
+          ● Inawasha Seva...
+        </span>
+        <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded-lg border border-slate-300 text-xs font-bold hover:bg-slate-100">
+          🌐 <span id="lang-btn-text">English</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="max-w-7xl mx-auto px-4 flex overflow-x-auto gap-6 text-sm text-slate-600 border-t border-slate-100">
+      <button onclick="switchTab('catalog')" id="tab-catalog" class="py-3 whitespace-nowrap tab-active" data-sw="1. Katalogi & Oda ya Bidhaa" data-en="1. Wholesale Catalog & Order">1. Katalogi & Oda ya Bidhaa</button>
+      <button onclick="switchTab('onboard')" id="tab-onboard" class="py-3 whitespace-nowrap" data-sw="2. Sajili Duka Lako" data-en="2. Register Your Shop">2. Sajili Duka Lako</button>
+      <button onclick="switchTab('calculator')" id="tab-calculator" class="py-3 whitespace-nowrap" data-sw="3. Kikokotoo & Ada (BoT KFS)" data-en="3. Fee Calculator (BoT KFS)">3. Kikokotoo & Ada (BoT KFS)</button>
+      <button onclick="switchTab('compliance')" id="tab-compliance" class="py-3 whitespace-nowrap" data-sw="4. Faragha & Malalamiko" data-en="4. Privacy & Complaints">4. Faragha & Malalamiko</button>
+      <button onclick="switchTab('admin')" id="tab-admin" class="py-3 whitespace-nowrap text-indigo-700 font-semibold" data-sw="5. Admin & Wasambazaji" data-en="5. Admin & Distributors">5. Admin & Wasambazaji</button>
+    </nav>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-7xl mx-auto px-4 py-6 flex-grow w-full">
+
+    <!-- TAB 1: MERCHANT CATALOG & LIVE ORDER CHECKOUT -->
+    <section id="view-catalog" class="space-y-6">
+      <div class="bg-gradient-to-r from-emerald-800 to-teal-700 text-white rounded-2xl p-6 shadow-md">
+        <div class="max-w-3xl">
+          <span class="inline-block bg-emerald-950/60 text-emerald-200 text-xs font-semibold px-3 py-1 rounded-full mb-2" data-sw="Mtaji wa Bidhaa kwa Maduka, Famasi & Pembejeo" data-en="Inventory Credit for Retail Shops, Pharmacies & Agro-Dealers">
+            Mtaji wa Bidhaa kwa Maduka, Famasi & Pembejeo
+          </span>
+          <h2 class="text-2xl md:text-3xl font-extrabold mb-2" data-sw="Jaza Duka Lako Leo, Lipa Kidogo Kidogo Kila Wiki" data-en="Restock Your Shop Today, Repay Weekly From Daily Sales">
+            Jaza Duka Lako Leo, Lipa Kidogo Kidogo Kila Wiki
+          </h2>
+          <p class="text-emerald-100 text-sm" data-sw="Tunalipa msambazaji moja kwa moja kupitia TIPS na bidhaa zinafika dukani kwako ndani ya saa 24. Hakuna makato yaliyofichwa." data-en="We pay the wholesale distributor directly via TIPS and goods arrive at your shop within 24 hours. Zero hidden charges.">
+            Tunalipa msambazaji moja kwa moja kupitia TIPS na bidhaa zinafika dukani kwako ndani ya saa 24. Hakuna makato yaliyofichwa.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Product Grid -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex justify-between items-center">
+            <h3 class="font-bold text-lg text-slate-900" data-sw="Bidhaa za Jumla Zinazotoka Haraka" data-en="Fast-Moving Wholesale SKUs">Bidhaa za Jumla Zinazotoka Haraka</h3>
+            <span class="text-xs text-slate-500">Msambazaji: Dar FMCG Anchor Distributors</span>
+          </div>
+          <div id="sku-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+        </div>
+
+        <!-- Cart & Live API Checkout -->
+        <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm h-fit sticky top-28 space-y-4">
+          <h3 class="font-bold text-base border-b pb-2 text-slate-900" data-sw="Kikapu cha Oda & Malipo ya TIPS" data-en="Order Cart & TIPS Settlement">Kikapu cha Oda & Malipo ya TIPS</h3>
+          
+          <div id="cart-items" class="space-y-2 text-sm text-slate-600 min-h-[60px]">
+            <p class="text-slate-400 italic" data-sw="Chagua bidhaa upande wa kushoto..." data-en="Select wholesale items on the left...">Chagua bidhaa upande wa kushoto...</p>
+          </div>
+
+          <div class="border-t pt-3 space-y-3 text-sm">
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 mb-1" data-sw="Namba ya Duka (Merchant ID)" data-en="Verified Merchant ID">Namba ya Duka (Merchant ID)</label>
+              <input type="number" id="checkout-merchant-id" value="1" min="1" class="w-full border rounded-lg px-3 py-2 text-sm" />
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-600 mb-1" data-sw="Muda wa Marejesho" data-en="Repayment Tenure">Muda wa Marejesho</label>
+              <select id="checkout-tenure" onchange="renderCart()" class="w-full border rounded-lg px-3 py-2 text-sm">
+                <option value="14">Siku 14 (Ada 2.0% • Marejesho 2 ya Wiki)</option>
+                <option value="21">Siku 21 (Ada 3.0% • Marejesho 3 ya Wiki)</option>
+                <option value="30" selected>Siku 30 (Ada 4.0% • Marejesho 4 ya Wiki)</option>
+              </select>
+            </div>
+
+            <div class="bg-slate-50 p-3 rounded-lg space-y-1 text-xs">
+              <div class="flex justify-between"><span>Thamani ya Bidhaa (Principal):</span><strong id="cart-principal">TZS 0</strong></div>
+              <div class="flex justify-between"><span>Ada ya Huduma (Facility Fee):</span><strong id="cart-fee">TZS 0</strong></div>
+              <div class="flex justify-between text-sm text-emerald-800 border-t pt-1"><span>Jumla ya Marejesho:</span><strong id="cart-total">TZS 0</strong></div>
+              <div class="flex justify-between text-slate-500"><span>Rejesho la Kila Wiki:</span><span id="cart-weekly">TZS 0</span></div>
+            </div>
+
+            <button onclick="submitLiveOrder()" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-2.5 rounded-lg text-sm transition" data-sw="Thibitisha Oda & Lipa Msambazaji" data-en="Confirm Order & Pay Supplier">
+              Thibitisha Oda & Lipa Msambazaji
+            </button>
+            <div id="checkout-feedback" class="text-xs hidden p-2.5 rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: MERCHANT ONBOARDING (BoT PDPA COMPLIANT) -->
+    <section id="view-onboard" class="hidden max-w-2xl mx-auto bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+      <h2 class="text-xl font-bold text-slate-900 mb-1" data-sw="Usajili wa Duka (KYC & Uhakiki)" data-en="Merchant Shop Registration (KYC)">Usajili wa Duka (KYC & Uhakiki)</h2>
+      <p class="text-xs text-slate-500 mb-5" data-sw="Jaza taarifa sahihi za biashara yako kupata kikomo cha awali cha TZS 300,000 ndani ya saa 24." data-en="Submit verified business details to unlock a TZS 300,000 starter inventory limit within 24 hours.">
+        Jaza taarifa sahihi za biashara yako kupata kikomo cha awali cha TZS 300,000 ndani ya saa 24.
+      </p>
+
+      <form onsubmit="submitMerchantOnboard(event)" class="space-y-4 text-sm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-semibold text-xs mb-1">Jina la Duka / Biashara *</label>
+            <input type="text" id="ob-shop" required placeholder="Mfano: Baraka General Store" class="w-full border rounded-lg px-3 py-2" />
+          </div>
+          <div>
+            <label class="block font-semibold text-xs mb-1">Jina Kamili la Mmiliki *</label>
+            <input type="text" id="ob-owner" required placeholder="Jina kama lilivyo kwenye NIDA" class="w-full border rounded-lg px-3 py-2" />
+          </div>
+          <div>
+            <label class="block font-semibold text-xs mb-1">Namba ya Simu (Lipa Namba / M-Pesa) *</label>
+            <input type="text" id="ob-phone" required placeholder="255712345678" class="w-full border rounded-lg px-3 py-2" />
+          </div>
+          <div>
+            <label class="block font-semibold text-xs mb-1">Namba ya NIDA *</label>
+            <input type="text" id="ob-nida" required placeholder="19850101-12345-00001-12" class="w-full border rounded-lg px-3 py-2" />
+          </div>
+          <div>
+            <label class="block font-semibold text-xs mb-1">TRA TIN Number *</label>
+            <input type="text" id="ob-tin" required placeholder="123-456-789" class="w-full border rounded-lg px-3 py-2" />
+          </div>
+          <div>
+            <label class="block font-semibold text-xs mb-1">Namba ya Leseni ya Biashara *</label>
+            <input type="text" id="ob-license" required placeholder="BL-2026-00981" class="w-full border rounded-lg px-3 py-2" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-xs mb-1">Kata / Wilaya / Mkoa Lilipo Duka *</label>
+          <input type="text" id="ob-ward" required placeholder="Mfano: Mjimwema, Kigamboni, Dar es Salaam" class="w-full border rounded-lg px-3 py-2" />
+        </div>
+
+        <!-- Mandatory BoT & PDPA Explicit Consent Checkboxes -->
+        <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 space-y-2 text-xs text-slate-700">
+          <label class="flex items-start gap-2 cursor-pointer">
+            <input type="checkbox" id="ob-pdpa" required class="mt-0.5" />
+            <span><strong>Idhini ya Sheria ya Ulinzi wa Taarifa Binafsi (PDPA):</strong> Ninakubali Gohigodukacredit Microfinance Limited ihakiki NIDA, TIN, na miamala yangu ya biashara kwa madhumuni ya tathmini ya mkopo wa bidhaa pekee. (Hatuchukui orodha ya majina kwenye simu yako).</span>
+          </label>
+          <label class="flex items-start gap-2 cursor-pointer">
+            <input type="checkbox" id="ob-crb" required class="mt-0.5" />
+            <span><strong>Idhini ya Credit Reference Bureau (CRB):</strong> Ninakubali taarifa zangu za urejeshaji wa mikopo ya bidhaa zishirikishwe na taasisi za CRB zilizoidhinishwa na Benki Kuu ya Tanzania (BoT).</span>
+          </label>
+        </div>
+
+        <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-2.5 rounded-lg">
+          Tuma Maombi ya Usajili
+        </button>
+        <div id="onboard-feedback" class="text-xs hidden p-3 rounded-lg"></div>
+      </form>
+    </section>
+
+    <!-- TAB 3: BoT KEY FACTS STATEMENT (KFS) CALCULATOR -->
+    <section id="view-calculator" class="hidden max-w-4xl mx-auto space-y-6">
+      <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900 mb-1" data-sw="Kikokotoo cha Uwazi & Jedwali la Ada (BoT Key Facts Statement)" data-en="Transparent Pricing & Key Facts Statement (BoT KFS)">
+          Kikokotoo cha Uwazi & Jedwali la Ada (BoT Key Facts Statement)
+        </h2>
+        <p class="text-xs text-slate-500 mb-5">Kwa mujibu wa Mwongozo wa Benki Kuu ya Tanzania (BoT) kwa Watoa Mikopo ya Kidijitali (Tier 2 Microfinance).</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="space-y-4">
+            <div>
+              <label class="flex justify-between text-sm font-semibold mb-1">
+                <span>Thamani ya Bidhaa (Principal):</span>
+                <span class="text-emerald-700 font-extrabold" id="kfs-slider-val">TZS 1,000,000</span>
+              </label>
+              <input type="range" id="kfs-principal" min="100000" max="3000000" step="50000" value="1000000" oninput="calculateKFS()" class="w-full accent-emerald-700" />
+              <div class="flex justify-between text-xs text-slate-400"><span>TZS 100,000</span><span>TZS 3,000,000</span></div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-1">Chagua Muda wa Marejesho:</label>
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" onclick="setKfsTenure(14)" id="kfs-t-14" class="kfs-t-btn border rounded-lg py-2 text-xs font-bold">Siku 14 (2.0%)</button>
+                <button type="button" onclick="setKfsTenure(21)" id="kfs-t-21" class="kfs-t-btn border rounded-lg py-2 text-xs font-bold">Siku 21 (3.0%)</button>
+                <button type="button" onclick="setKfsTenure(30)" id="kfs-t-30" class="kfs-t-btn border border-emerald-700 bg-emerald-50 text-emerald-800 rounded-lg py-2 text-xs font-bold">Siku 30 (4.0%)</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-900 text-white rounded-xl p-5 space-y-2.5 text-sm">
+            <div class="flex justify-between border-b border-slate-700 pb-2">
+              <span class="text-slate-400">Mkopo wa Bidhaa (Principal):</span>
+              <strong id="kfs-out-principal">TZS 1,000,000</strong>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Ada ya Huduma (Flat Facility Fee):</span>
+              <strong class="text-amber-400" id="kfs-out-fee">TZS 40,000 (4.0%)</strong>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Ada ya Fomu / Maombi:</span>
+              <strong class="text-emerald-400">TZS 0 (Bure)</strong>
+            </div>
+            <div class="flex justify-between border-t border-slate-700 pt-2 text-base">
+              <span>Jumla Kuu ya Kurejesha:</span>
+              <strong class="text-emerald-300" id="kfs-out-total">TZS 1,040,000</strong>
+            </div>
+            <div class="flex justify-between text-xs text-slate-300 pt-1">
+              <span>Rejesho la Kila Wiki:</span>
+              <strong id="kfs-out-weekly">TZS 260,000 × Wiki 4</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mandatory Disclosure Table -->
+      <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+        <table class="w-full text-left text-xs">
+          <thead class="bg-slate-100 text-slate-700 font-bold">
+            <tr>
+              <th class="p-3">Ngazi ya Kikomo (Tier)</th>
+              <th class="p-3">Kikomo cha Bidhaa</th>
+              <th class="p-3">Muda</th>
+              <th class="p-3">Ada ya Mzunguko</th>
+              <th class="p-3">Adhabu ya Kuchelewa</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y">
+            <tr><td class="p-3 font-semibold">Tier 1 (Mwanzo)</td><td class="p-3">TZS 300,000</td><td class="p-3">Siku 14</td><td class="p-3">2.0% (Flat)</td><td class="p-3" rowspan="3">Siku 2 za neema (Grace Period), kisha 1.5% mara moja pekee.</td></tr>
+            <tr><td class="p-3 font-semibold">Tier 2 (Kati)</td><td class="p-3">TZS 750,000</td><td class="p-3">Siku 21</td><td class="p-3">3.0% (Flat)</td></tr>
+            <tr><td class="p-3 font-semibold">Tier 3 (Biashara Kubwa)</td><td class="p-3">TZS 1,500,000+</td><td class="p-3">Siku 30</td><td class="p-3">4.0% (Flat)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 4: PRIVACY, GOVERNANCE & CUSTOMER COMPLAINTS -->
+    <section id="view-compliance" class="hidden max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white rounded-xl border border-slate-200 p-6 space-y-3 text-xs leading-relaxed">
+        <h3 class="text-base font-bold text-slate-900">Sera ya Faragha & Ulinzi wa Mlaji (BoT & PDPA)</h3>
+        <p><strong>1. Mmiliki wa Jukwaa:</strong> Jukwaa hili linamilikiwa na <strong>Gohigodukacredit Microfinance Limited</strong>, lenye ofisi zake Gophigo Street, S.L.P 36282, Kigamboni, Dar es Salaam.</p>
+        <p><strong>2. Marufuku ya Kuchukua Majina ya Simu (No Contact Scraping):</strong> Hatukusanyi wala kutumia orodha ya majina kwenye simu yako (phonebook) na hatutumii ujumbe wa udhalilishaji kwa ndugu au wateja wako.</p>
+        <p><strong>3. Utatuzi wa Malalamiko:</strong> Malalamiko yote hujibiwa ndani ya saa 24–48. Kama hujaridhika na suluhisho letu, una haki ya kuwasilisha rufaa kwa Dawati la Ulinzi wa Mlaji la <strong>Benki Kuu ya Tanzania (BoT)</strong>.</p>
+      </div>
+
+      <div class="bg-white rounded-xl border border-slate-200 p-6 space-y-3">
+        <h3 class="text-base font-bold text-slate-900">Dawati la Malalamiko & Huduma kwa Wateja</h3>
+        <form onsubmit="submitComplaint(event)" class="space-y-3 text-xs">
+          <input type="text" required placeholder="Jina Lako / Jina la Duka" class="w-full border rounded-lg px-3 py-2" />
+          <input type="text" required placeholder="Namba ya Simu (255...)" class="w-full border rounded-lg px-3 py-2" />
+          <textarea required rows="3" placeholder="Eleza changamoto au swali lako..." class="w-full border rounded-lg px-3 py-2"></textarea>
+          <button type="submit" class="w-full bg-slate-900 text-white font-bold py-2 rounded-lg">Wasilisha Tiketi ya Malalamiko</button>
+          <p id="complaint-msg" class="text-emerald-700 font-semibold hidden"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- TAB 5: ADMIN & DISTRIBUTOR OPERATIONS DASHBOARD -->
+    <section id="view-admin" class="hidden space-y-6">
+      <div class="flex flex-wrap justify-between items-center gap-3 bg-white p-4 rounded-xl border border-slate-200">
+        <div>
+          <h2 class="text-lg font-extrabold text-slate-900">Admin & Distributor Operations Ledger</h2>
+          <p class="text-xs text-slate-500">Live PostgreSQL Data • Gohigodukacredit Microfinance Limited</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <input type="text" id="api-url-input" value="https://dukacredit-backend-3.onrender.com" class="border rounded-lg px-3 py-1.5 text-xs w-64" />
+          <button onclick="loadAdminData()" class="bg-indigo-700 hover:bg-indigo-800 text-white text-xs font-bold px-4 py-2 rounded-lg">
+            🔄 Refresh Live Data
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white p-4 rounded-xl border border-slate-200">
+          <p class="text-xs text-slate-500">Maduka Yaliyosajiliwa</p>
+          <p class="text-2xl font-extrabold text-slate-900" id="adm-merchants">0</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200">
+          <p class="text-xs text-slate-500">Jumla Iliyolipwa Wasambazaji</p>
+          <p class="text-xl font-extrabold text-emerald-700" id="adm-disbursed">TZS 0</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200">
+          <p class="text-xs text-slate-500">Marejesho Yaliyokusanywa</p>
+          <p class="text-xl font-extrabold text-blue-700" id="adm-collected">TZS 0</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200">
+          <p class="text-xs text-slate-500">Salio Linalodaiwa (Portfolio)</p>
+          <p class="text-xl font-extrabold text-amber-700" id="adm-outstanding">TZS 0</p>
+        </div>
+      </div>
+
+      <!-- Merchant KYC Queue -->
+      <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-4 py-3 border-b bg-slate-50 font-bold text-sm">Orodha ya Maduka & Uhakiki wa KYC</div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-100 text-slate-600">
+              <tr>
+                <th class="p-3">ID</th>
+                <th class="p-3">Duka & Mmiliki</th>
+                <th class="p-3">NIDA / TIN</th>
+                <th class="p-3">Eneo</th>
+                <th class="p-3">Kikomo</th>
+                <th class="p-3">Hali ya KYC</th>
+              </tr>
+            </thead>
+            <tbody id="adm-merchant-rows" class="divide-y"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Live Orders & TIPS Ledger -->
+      <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+        <div class="px-4 py-3 border-b bg-slate-50 font-bold text-sm">Oda za Bidhaa & Miamala ya TIPS</div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-100 text-slate-600">
+              <tr>
+                <th class="p-3">Order Ref</th>
+                <th class="p-3">Merchant ID</th>
+                <th class="p-3">Bidhaa (Principal)</th>
+                <th class="p-3">Jumla + Ada</th>
+                <th class="p-3">Imelipwa</th>
+                <th class="p-3">Hali</th>
+              </tr>
+            </thead>
+            <tbody id="adm-order-rows" class="divide-y"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-6 px-4 mt-12">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-4">
+      <div>
+        <p class="text-white font-bold">Gohigodukacredit Microfinance Limited</p>
+        <p>Gophigo Street, P.O. Box 36282, Kigamboni, Dar es Salaam, Tanzania.</p>
+      </div>
+      <div class="md:text-right">
+        <p>Huduma kwa Wateja: +255 700 000 000 | support@gohigodukacredit.co.tz</p>
+        <p>© 2026 Gohigodukacredit Microfinance Limited. Haki zote zimehifadhiwa.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let currentLang = 'sw';
+    let kfsTenure = 30;
+    const cart = {};
+
+    const SKUS = [
+      { id: 1, name: "Korie Cooking Oil (20L Jerrycan)", price: 68000, unit: "Dumu 1 (20L)" },
+      { id: 2, name: "Kilombero Brown Sugar (25kg Bag)", price: 72000, unit: "Mfuko 25kg" },
+      { id: 3, name: "Azam Home Baking Flour (25kg)", price: 46000, unit: "Mfuko 25kg" },
+      { id: 4, name: "Mbeya Super Rice (50kg Bag)", price: 115000, unit: "Gunia 50kg" },
+      { id: 5, name: "Jamaa Bar Soap (Carton 25 Bars)", price: 38000, unit: "Katoni 1" },
+      { id: 6, name: "Azam Energy / Soda Mix (5 Cartons)", price: 55000, unit: "Katoni 5" }
+    ];
+
+    function getApiBase() {
+      return document.getElementById('api-url-input').value.replace(/\/$/, '');
+    }
+
+    function formatTZS(val) {
+      return 'TZS ' + Math.round(val).toLocaleString('en-US');
+    }
+
+    async function checkBackendHealth() {
+      const badge = document.getElementById('api-status-badge');
+      try {
+        const res = await fetch(`${getApiBase()}/health`);
+        if (res.ok) {
+          badge.className = "text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 font-bold";
+          badge.textContent = "● API Live (Render)";
+        } else {
+          throw new Error();
+        }
+      } catch {
+        badge.className = "text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 font-medium";
+        badge.textContent = "● Seva Inaamka (Subiri sekunde 20)";
+      }
+    }
+
+    function switchTab(tab) {
+      ['catalog', 'onboard', 'calculator', 'compliance', 'admin'].forEach(t => {
+        document.getElementById(`view-${t}`).classList.add('hidden');
+        document.getElementById(`tab-${t}`).classList.remove('tab-active');
+      });
+      document.getElementById(`view-${tab}`).classList.remove('hidden');
+      document.getElementById(`tab-${tab}`).classList.add('tab-active');
+      if (tab === 'admin') loadAdminData();
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'sw' ? 'en' : 'sw';
+      document.getElementById('lang-btn-text').textContent = currentLang === 'sw' ? 'English' : 'Kiswahili';
+      document.querySelectorAll('[data-sw]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+    }
+
+    function renderSKUs() {
+      const grid = document.getElementById('sku-grid');
+      grid.innerHTML = SKUS.map(s => `
+        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded">${s.unit}</span>
+            <h4 class="font-bold text-slate-900 text-sm mt-1">${s.name}</h4>
+            <p class="text-base font-extrabold text-slate-800 mt-1">${formatTZS(s.price)}</p>
+          </div>
+          <div class="mt-3 flex items-center justify-between border-t pt-2">
+            <button onclick="updateCart(${s.id}, -1)" class="px-2.5 py-1 bg-slate-100 rounded font-bold text-sm">-</button>
+            <span class="text-sm font-bold" id="qty-${s.id}">${cart[s.id] || 0}</span>
+            <button onclick="updateCart(${s.id}, 1)" class="px-2.5 py-1 bg-emerald-700 text-white rounded font-bold text-sm">+</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function updateCart(id, delta) {
+      cart[id] = Math.max(0, (cart[id] || 0) + delta);
+      if (cart[id] === 0) delete cart[id];
+      document.getElementById(`qty-${id}`).textContent = cart[id] || 0;
+      renderCart();
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items');
+      const entries = Object.entries(cart);
+      let principal = 0;
+
+      if (entries.length === 0) {
+        container.innerHTML = `<p class="text-slate-400 italic">Chagua bidhaa upande wa kushoto...</p>`;
+      } else {
+        container.innerHTML = entries.map(([id, qty]) => {
+          const item = SKUS.find(s => s.id == id);
+          const sub = item.price * qty;
+          principal += sub;
+          return `<div class="flex justify-between text-xs"><span>${qty}× ${item.name}</span><strong>${formatTZS(sub)}</strong></div>`;
+        }).join('');
+      }
+
+      const tenure = parseInt(document.getElementById('checkout-tenure').value);
+      const rates = { 14: { pct: 0.02, w: 2 }, 21: { pct: 0.03, w: 3 }, 30: { pct: 0.04, w: 4 } };
+      const fee = principal * rates[tenure].pct;
+      const total = principal + fee;
+      const weekly = total / rates[tenure].w;
+
+      document.getElementById('cart-principal').textContent = formatTZS(principal);
+      document.getElementById('cart-fee').textContent = formatTZS(fee);
+      document.getElementById('cart-total').textContent = formatTZS(total);
+      document.getElementById('cart-weekly').textContent = `${formatTZS(weekly)} × ${rates[tenure].w}`;
+      return principal;
+    }
+
+    async function submitLiveOrder() {
+      const principal = renderCart();
+      const fb = document.getElementById('checkout-feedback');
+      if (principal <= 0) {
+        fb.className = "text-xs p-2.5 rounded-lg bg-red-50 text-red-700 block";
+        fb.textContent = "Tafadhali chagua angalau bidhaa moja kwanza.";
+        return;
+      }
+      const payload = {
+        merchant_id: parseInt(document.getElementById('checkout-merchant-id').value),
+        supplier_id: 1,
+        principal_tzs: principal,
+        tenure_days: parseInt(document.getElementById('checkout-tenure').value)
+      };
+
+      try {
+        const res = await fetch(`${getApiBase()}/api/orders/checkout`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.detail || "Hitilafu imetokea");
+        fb.className = "text-xs p-2.5 rounded-lg bg-emerald-50 text-emerald-800 block font-semibold";
+        fb.textContent = `✅ Oda Imefaulu! Ref: ${data.order_ref} | Msambazaji amelipwa ${formatTZS(data.paid_to_supplier_tzs)} kupitia TIPS.`;
+      } catch (err) {
+        fb.className = "text-xs p-2.5 rounded-lg bg-red-50 text-red-700 block";
+        fb.textContent = `❌ ${err.message} (Hakikisha Merchant ID imesajiliwa na kuhakikiwa KYC kwenye Admin tab).`;
+      }
+    }
+
+    async function submitMerchantOnboard(e) {
+      e.preventDefault();
+      const fb = document.getElementById('onboard-feedback');
+      const payload = {
+        shop_name: document.getElementById('ob-shop').value,
+        owner_name: document.getElementById('ob-owner').value,
+        phone_number: document.getElementById('ob-phone').value,
+        nida_number: document.getElementById('ob-nida').value,
+        tin_number: document.getElementById('ob-tin').value,
+        business_license_no: document.getElementById('ob-license').value,
+        ward_location: document.getElementById('ob-ward').value,
+        pdpa_consent_granted: document.getElementById('ob-pdpa').checked,
+        crb_sharing_consent: document.getElementById('ob-crb').checked
+      };
+
+      try {
+        const res = await fetch(`${getApiBase()}/api/merchants/onboard`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.detail || "Imeshindikana kusajili");
+        fb.className = "text-xs p-3 rounded-lg bg-emerald-50 text-emerald-800 block font-semibold";
+        fb.textContent = `✅ Hongera! Duka limesajiliwa (Merchant ID: ${data.merchant_id}). Nenda kwenye Tab ya 'Admin & Wasambazaji' kuidhinisha KYC.`;
+        e.target.reset();
+      } catch (err) {
+        fb.className = "text-xs p-3 rounded-lg bg-red-50 text-red-700 block";
+        fb.textContent = `❌ ${err.message}`;
+      }
+    }
+
+    function setKfsTenure(days) {
+      kfsTenure = days;
+      [14, 21, 30].forEach(d => {
+        const btn = document.getElementById(`kfs-t-${d}`);
+        btn.className = d === days
+          ? "kfs-t-btn border border-emerald-700 bg-emerald-50 text-emerald-800 rounded-lg py-2 text-xs font-bold"
+          : "kfs-t-btn border rounded-lg py-2 text-xs font-bold";
+      });
+      calculateKFS();
+    }
+
+    function calculateKFS() {
+      const p = parseFloat(document.getElementById('kfs-principal').value);
+      const map = { 14: { pct: 2.0, w: 2 }, 21: { pct: 3.0, w: 3 }, 30: { pct: 4.0, w: 4 } };
+      const r = map[kfsTenure];
+      const fee = p * (r.pct / 100);
+      const total = p + fee;
+      document.getElementById('kfs-slider-val').textContent = formatTZS(p);
+      document.getElementById('kfs-out-principal').textContent = formatTZS(p);
+      document.getElementById('kfs-out-fee').textContent = `${formatTZS(fee)} (${r.pct}%)`;
+      document.getElementById('kfs-out-total').textContent = formatTZS(total);
+      document.getElementById('kfs-out-weekly').textContent = `${formatTZS(total / r.w)} × Wiki ${r.w}`;
+    }
+
+    function submitComplaint(e) {
+      e.preventDefault();
+      const msg = document.getElementById('complaint-msg');
+      msg.textContent = `✅ Tiketi #GD-${Math.floor(1000 + Math.random()*9000)} imepokelewa. Timu yetu ya Gophigo Street itawasiliana nawe ndani ya saa 24.`;
+      msg.classList.remove('hidden');
+      e.target.reset();
+    }
+
+    async function loadAdminData() {
+      try {
+        const [sumRes, mRes, oRes] = await Promise.all([
+          fetch(`${getApiBase()}/api/admin/summary`),
+          fetch(`${getApiBase()}/api/admin/merchants`),
+          fetch(`${getApiBase()}/api/admin/orders`)
+        ]);
+        const sum = await sumRes.json();
+        const merchants = await mRes.json();
+        const orders = await oRes.json();
+
+        document.getElementById('adm-merchants').textContent = `${sum.verified_merchants} / ${sum.total_merchants}`;
+        document.getElementById('adm-disbursed').textContent = formatTZS(sum.total_disbursed_tzs);
+        document.getElementById('adm-collected').textContent = formatTZS(sum.total_collected_tzs);
+        document.getElementById('adm-outstanding').textContent = formatTZS(sum.outstanding_portfolio_tzs);
+
+        document.getElementById('adm-merchant-rows').innerHTML = merchants.map(m => `
+          <tr>
+            <td class="p-3 font-bold">${m.id}</td>
+            <td class="p-3"><strong>${m.shop_name}</strong><br><span class="text-slate-500">${m.owner_name} (${m.phone_number})</span></td>
+            <td class="p-3">NIDA: ${m.nida_number}<br>TIN: ${m.tin_number}</td>
+            <td class="p-3">${m.ward_location}</td>
+            <td class="p-3 font-semibold">${formatTZS(m.credit_limit_tzs)}</td>
+            <td class="p-3">
+              ${m.kyc_verified
+                ? '<span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800 font-bold">Verified</span>'
+                : `<button onclick="verifyMerchant(${m.id})" class="px-2.5 py-1 rounded bg-amber-600 text-white font-bold hover:bg-amber-700">Approve KYC</button>`}
+            </td>
+          </tr>
+        `).join('') || '<tr><td colspan="6" class="p-4 text-center text-slate-400">Hakuna duka lililosajiliwa bado.</td></tr>';
+
+        document.getElementById('adm-order-rows').innerHTML = orders.map(o => `
+          <tr>
+            <td class="p-3 font-mono font-bold">${o.order_ref}</td>
+            <td class="p-3">Duka #${o.merchant_id}</td>
+            <td class="p-3">${formatTZS(o.principal_tzs)}</td>
+            <td class="p-3 font-semibold">${formatTZS(o.total_repayable_tzs)}</td>
+            <td class="p-3 text-emerald-700 font-semibold">${formatTZS(o.amount_paid_tzs)}</td>
+            <td class="p-3"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold">${o.status}</span></td>
+          </tr>
+        `).join('') || '<tr><td colspan="6" class="p-4 text-center text-slate-400">Hakuna oda iliyowekwa bado.</td></tr>';
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    async function verifyMerchant(id) {
+      await fetch(`${getApiBase()}/api/merchants/${id}/verify-kyc`, { method: 'POST' });
+      loadAdminData();
+    }
+
+    renderSKUs();
+    checkBackendHealth();
+  </script>
+</body>
+</html>
